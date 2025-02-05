@@ -1,0 +1,195 @@
+/* Base styles for a clean, minimal foundation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Gallery-style layout with generous white space */
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+}
+
+/* Sidebar styling for minimal yet sophisticated navigation */
+.sidebar {
+    padding: 3rem 2rem;
+    border-right: 1px solid #f0f0f0;
+    position: fixed;
+    height: 100vh;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Logo styling - personalized header */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    letter-spacing: -1px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: translateY(-2px);
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Clean, minimal navigation styling */
+.nav-links {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: #666;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+    position: relative;
+    padding-left: 0;
+}
+
+.nav-link:hover {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+.nav-link.active {
+    color: #333;
+    opacity: 1;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 2rem;
+    height: 2px;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+}
+
+/* Gallery space styling */
+.gallery {
+    margin-left: 250px;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    background: #fafafa;
+}
+
+/* Project card styling inspired by art gallery displays */
+.project-card {
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.project-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background: #f5f5f5;
+}
+
+.project-content {
+    padding: 1.5rem;
+    background: white;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.project-description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Smooth loading animation for gallery items */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.project-card {
+    animation: fadeIn 0.6s ease-out forwards;
+    animation-delay: calc(var(--animation-order) * 0.1s);
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: relative;
+        height: auto;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .gallery {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+
+    .nav-links {
+        margin-top: 2rem;
+    }
+
+    .logo-container {
+        align-items: center;
+    }
+}
