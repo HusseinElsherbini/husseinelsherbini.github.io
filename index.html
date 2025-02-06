@@ -3,51 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hussein Elsherbini | Portfolio</title>
+    <title>Hussein's Journey</title>
+    <!-- Using Space Grotesk for a modern, tech-forward feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <!-- Creating a more unique and personal header -->
-            <div class="logo-container">
-                <div class="logo">HE</div>
-                <h1 class="logo-text">Hussein Elsherbini</h1>
+    <!-- Custom cursor elements for interactive feel -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Progress bar shows journey progression -->
+    <div class="progress-bar"></div>
+
+    <!-- Opening screen creates immediate engagement -->
+    <section class="intro-screen">
+        <div class="intro-text">
+            Hello, I'm Hussein.<br>
+            Let me take you through my journey of creation and discovery.
+        </div>
+        <div class="scroll-indicator">Scroll to begin the journey →</div>
+    </section>
+
+    <!-- Story sections reveal your journey -->
+    <section class="story-section" id="beginning">
+        <div class="story-content">
+            <div class="story-text">
+                <h2>The Beginning</h2>
+                <p>It all started with a curiosity about how things work. 
+                   From taking apart toys to building my first computer, 
+                   each experience shaped my path in technology.</p>
             </div>
-            <nav class="nav-links">
-                <a href="#projects" class="nav-link active">Projects</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </nav>
-        </aside>
+            <div class="story-image"></div>
+        </div>
+    </section>
 
-        <main class="gallery">
-            <!-- Project Cards -->
-            <article class="project-card">
-                <img src="assets/images/project1.jpg" alt="Project 1" class="project-image">
-                <div class="project-content">
-                    <h2 class="project-title">Project One</h2>
-                    <p class="project-description">A brief description of the project and its key features.</p>
-                </div>
-            </article>
+    <section class="story-section" id="discovery">
+        <div class="story-content">
+            <div class="story-image"></div>
+            <div class="story-text">
+                <h2>The Discovery</h2>
+                <p>Through years of exploration and learning,
+                   I discovered my passion for creating solutions
+                   that make a difference in people's lives.</p>
+            </div>
+        </div>
+    </section>
 
-            <article class="project-card">
-                <img src="assets/images/project2.jpg" alt="Project 2" class="project-image">
-                <div class="project-content">
-                    <h2 class="project-title">Project Two</h2>
-                    <p class="project-description">A brief description of the project and its key features.</p>
-                </div>
-            </article>
+    <section class="story-section" id="present">
+        <div class="story-content">
+            <div class="story-text">
+                <h2>The Present</h2>
+                <p>Today, I'm focused on building innovative solutions
+                   that push the boundaries of what's possible,
+                   always learning and growing along the way.</p>
+            </div>
+            <div class="story-image"></div>
+        </div>
+    </section>
 
-            <article class="project-card">
-                <img src="assets/images/project3.jpg" alt="Project 3" class="project-image">
-                <div class="project-content">
-                    <h2 class="project-title">Project Three</h2>
-                    <p class="project-description">A brief description of the project and its key features.</p>
-                </div>
-            </article>
-        </main>
-    </div>
     <script src="js/main.js"></script>
 </body>
 </html>
